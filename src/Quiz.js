@@ -96,7 +96,7 @@ export default function Quiz () {
   const [selectedOption, setSelectedOption] = useState(null)
   const [timeLeft, setTimeLeft] = useState(10)
   const [quizStarted, setQuizStarted] = useState(false)
-  const [direction, setDirection] = useState(1)
+  // const [direction, setDirection] = useState(1)
 
   const currentQuestion = quizData[currentIndex]
   const totalTime = 10
@@ -109,7 +109,7 @@ export default function Quiz () {
     if (!quizStarted) return
     if (selectedOption !== null) return
     if (timeLeft === 0) {
-      setDirection(1)
+      // setDirection(1)
       if (currentIndex + 1 < quizData.length) {
         setCurrentIndex(prev => prev + 1)
       } else {
@@ -130,7 +130,7 @@ export default function Quiz () {
       setScore(prev => prev + 1)
     }
     setTimeout(() => {
-      setDirection(1)
+      // setDirection(1)
       if (currentIndex + 1 < quizData.length) {
         setCurrentIndex(prev => prev + 1)
         setSelectedOption(null)
@@ -149,7 +149,7 @@ export default function Quiz () {
     setScore(0)
     setShowResult(false)
     setSelectedOption(null)
-    setDirection(-1)
+    // setDirection(-1)
     setQuizStarted(false)
   }
 
